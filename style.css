@@ -1,0 +1,289 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background-color: #121212;
+  color: #fff;
+  line-height: 1.6;
+}
+
+.logo {
+  margin-left: 280px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #00bcd4;
+  text-decoration: none;
+}
+
+.examples-placeholder li i {
+  color: #78909c;
+  margin-right: 5px;
+  font-size: 0.8em;
+}
+
+
+.header {
+  background-color: #1e1e1e;
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #1e1e1e;
+}
+
+
+
+
+.header-buttons {
+  display: flex;
+  margin-right: 20px;
+}
+
+.header-button {
+  background-color: transparent;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.header-button:hover {
+  background-color: #37474f;
+}
+
+.header-button:focus {
+  outline: none;
+  box-shadow: 0 0 5px #00bcd4;
+}
+
+
+.main-content {
+  padding: 20px;
+}
+
+.intro-section,
+.ui-principles-section,
+.ux-principles-section,
+.tools-section {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #1e1e1e;
+
+  border-radius: 5px;
+}
+
+h2 {
+  color: #00bcd4;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #37474f;
+
+  padding-bottom: 5px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+
+.footer {
+  background-color: #1e1e1e;
+  padding: 10px;
+  text-align: center;
+  font-size: 0.8em;
+  color: #78909c;
+}
+
+/* адапт. */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo {
+    margin-left: 20px;
+    margin-bottom: 10px;
+  }
+
+  .header-buttons {
+    margin: 0 20px;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .header-button {
+    margin: 5px 0;
+    text-align: center;
+  }
+
+  .main-content {
+    padding: 10px;
+
+  }
+
+  .intro-section,
+  .ui-principles-section,
+  .ux-principles-section,
+  .tools-section {
+    padding: 15px;
+
+    margin-bottom: 20px;
+    /* отступы */
+  }
+}
+
+.header-button.active {
+  background-color: #00bcd4;
+  color: #121212;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.centered-image {
+  display: block;
+  margin: 0 auto;
+}
+
+.examples-placeholder a {
+  color: #00bcd4;
+  text-decoration: none;
+}
+
+.examples-placeholder a:hover {
+  color: #26c6da;
+  text-decoration: underline;
+}
+
+
+.video-link {
+  color: #00bcd4;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.video-link:hover {
+  color: #26c6da;
+  text-decoration: underline;
+}
+
+.video-item h3 {
+  margin-bottom: 5px;
+}
+
+.video-item h3 i {
+  margin-left: 5px;
+  font-size: 0.8em;
+  color: #78909c;
+}
+
+.main-content {
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.intro-section,
+.ui-principles-section,
+.ux-principles-section,
+.tools-section,
+.video-item {
+  margin-bottom: 30px;
+  padding: 20px 40px;
+  background-color: #1e1e1e;
+  border-radius: 5px;
+  text-align: justify;
+}
+
+.examples-placeholder p,
+.examples-placeholder li,
+.article-placeholder p,
+.article-placeholder li {
+  text-align: justify;
+}
+
+
+
+.header-button {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.header-button:hover {
+  background-color: #37474f;
+  transform: scale(1.05);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.footer {
+  background-color: #1e1e1e;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.8em;
+  color: #78909c;
+  margin-top: 40px;
+}
+
+.footer-navigation {
+  margin-bottom: 10px;
+}
+
+.footer-navigation a {
+  color: #78909c;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer-navigation a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+
+/* Ссылки в основном тексте */
+.article-placeholder a,
+.examples-placeholder a,
+.videos-placeholder a {
+  color: #00bcd4;
+  text-decoration: none;
+  position: relative; /* Необходимо для анимации подчеркивания */
+}
+
+.article-placeholder a::before,
+.examples-placeholder a::before,
+.videos-placeholder a::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px; 
+  background-color: #26c6da; 
+  transition: width 0.3s ease-in-out; 
+}
+
+.article-placeholder a:hover,
+.examples-placeholder a:hover,
+.videos-placeholder a:hover {
+  color: #26c6da;
+}
+
+.article-placeholder a:hover::before,
+.examples-placeholder a:hover::before,
+.videos-placeholder a:hover::before {
+  width: 100%; 
+}
+
